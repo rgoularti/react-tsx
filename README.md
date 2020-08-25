@@ -1,5 +1,5 @@
 # react-tsx
-React with typescript study project.
+React and Typescript study project.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
