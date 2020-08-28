@@ -1,8 +1,8 @@
+import 'bulma/css/bulma.css';
+
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-const App = () => {
-  return <div>Hi there!</div>;
-};
+import { App } from './components';
 
 ReactDOM.render(<App />, document.querySelector('#root'));
