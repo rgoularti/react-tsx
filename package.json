@@ -30,6 +30,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "test:coverage": "react-scripts test --coverage --watchAll=false",
     "lint": "eslint '*/**/*.{js,ts,tsx}' --quiet --fix",
     "eject": "react-scripts eject"
   },
@@ -48,6 +49,20 @@
       "last 1 safari version"
     ]
   },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.tsx",
+      "!src/**/index.tsx"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 100,
+        "functions": 100,
+        "lines": 100,
+        "statements": 100
+      }
+    }
+  },
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged"
@@ -56,7 +71,7 @@
   "lint-staged": {
     "*.{js,ts,tsx}": [
       "eslint --fix",
-      "jest --bail --findRelatedTests"
+      "yarn test:coverage"
     ]
   }
 }
