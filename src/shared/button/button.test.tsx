@@ -11,10 +11,10 @@ describe('Button', () => {
     const { container } = render(<Button />);
 
     // Act
-    const buttonElement = container.querySelector('.button');
+    const buttonElement: HTMLButtonElement = container.querySelector('.button');
 
     // Assert
-    expect(buttonElement).toBeInTheDocument();
+    expect(buttonElement.className).toEqual('button');
   });
 
   it('should render button with primary style', () => {
@@ -22,9 +22,9 @@ describe('Button', () => {
     const { container } = render(<Button primary />);
 
     // Act
-    const buttonElement = container.querySelector('.is-primary');
+    const buttonElement: HTMLButtonElement = container.querySelector('.is-primary');
 
     // Assert
-    expect(buttonElement).toBeInTheDocument();
+    expect(buttonElement.className).toEqual('button is-primary');
   });
 });
