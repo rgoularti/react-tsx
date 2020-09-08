@@ -54,6 +54,9 @@
       "src/**/*.tsx",
       "!src/**/index.tsx"
     ],
+    "coveragePathIgnorePatterns": [
+      "/node_modules/"
+    ],
     "coverageThreshold": {
       "global": {
         "branches": 100,
