@@ -72,9 +72,11 @@
     }
   },
   "lint-staged": {
-    "*.{js,ts,tsx}": [
-      "eslint --fix",
+    "src/**/*.test.tsx": [
       "yarn test:coverage"
+    ],
+    "*.{js,ts,tsx}": [
+      "eslint --fix"
     ]
   }
 }
